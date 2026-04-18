@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>红包页 rp-4</title><link rel="stylesheet" href="assets/styles.css" /></head>
+<body>
+<main class="app">
+  <header class="topbar"><div><div class="title">红包页 / rp-4</div><div class="subtitle">多状态展示</div></div></header>
+  <section class="card" style="display:flex;gap:8px;flex-wrap:wrap;">
+    <button class="btn" data-rp-state="locked">未达成</button>
+    <button class="btn secondary" data-rp-state="ready">可开启</button>
+    <button class="btn secondary" data-rp-state="opened">已开启</button>
+    <button class="btn secondary" data-rp-state="expired">已过期</button>
+  </section>
+
+  <section class="redpacket" data-rp-panel="locked">
+    <h2>条件未满足</h2>
+    <p>再完成 2 个挑战即可开启红包</p>
+    <div class="progress" style="margin-top:16px"><span style="width:72%"></span></div>
+  </section>
+
+  <section class="redpacket hidden" data-rp-panel="ready">
+    <h2>恭喜获得红包</h2>
+    <p>点击下方按钮立即拆开</p>
+    <button class="btn pulse" style="margin-top:16px">立即拆开</button>
+  </section>
+
+  <section class="redpacket hidden" data-rp-panel="opened">
+    <h2>￥8.88</h2>
+    <p>红包已到账，继续挑战获取更多奖励</p>
+    <span class="status ok">到账成功</span>
+  </section>
+
+  <section class="redpacket hidden" data-rp-panel="expired">
+    <h2>红包已过期</h2>
+    <p>很遗憾，已超过领取时间</p>
+    <span class="status fail">已失效</span>
+  </section>
+</main>
+<nav class="bottom-nav"><a href="index.html">首页</a><a href="challenge.html">挑战</a><a href="rewards.html">奖励</a><a href="profile.html">我的</a><a href="redpacket-rp-4.html" class="active">红包</a><a href="achievements.html">徽章</a></nav>
+<script src="assets/main.js"></script>
+</body></html>
